@@ -1,0 +1,183 @@
+User
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Page</title>
+    <style>
+        img {
+            max-width: 100pt;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #a8c6db;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        select, input[type="date"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        /* Adjust the width of the Hobby, Skill, and Say something columns */
+        td.hobby-column,
+        td.skills-column,
+        td.say-something-column{
+            width: 20%
+        }
+        td.hobby-value-column,
+        td.skills-value-column,
+        td.say-something-value-column {
+            width: 40%;
+        }
+
+        /* Additional style for responsiveness */
+        @media (max-width: 100%) {
+            td.name-column,
+            td.gender-column {
+                width: 10%;
+            }
+
+            td.county-column,
+            td.birthday-column {
+                width: 50%;
+            }
+
+            th.photo-column,
+            td.photo-column {
+                max-width: 50pt;
+            }
+
+            td.hobby-value-column {
+                width: 100%; /* Adjust the width as needed for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction Page</h1>
+    </header>
+    <table>
+        <caption>About -- 112306089</caption>
+        <tr>
+            <th rowspan="5" class="photo-column"><img src="C:\Users\Cindy\Downloads\S__69009423.jpg" alt="Personal Photo"></th>
+            <td class="name-column">Name:</td>
+            <td class="name-value-column">石祐瑄</td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female" checked> Female
+                <input type="radio" name="gender" value="other"> Other
+            </td>
+        </tr>
+        <tr>
+            <td>County:</td>
+            <td>
+                <select>
+                    <option value="taipei">Taipei</option>
+                    <option value="tainan">Tainan</option>
+                    <option value="taichung">Taichung</option>
+                    <option value="taoyuan">Taoyuan</option>
+                    <option value="hualien" selected>Hualien</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td>
+                <input type="date" id="birthday" name="birthday" value="2004-07-02">
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td>
+                <input type="email" id="email" name="email" placeholder="Enter your e-mail" value="112306089@nccu.edu.tw">
+            </td>
+        </tr>
+        <!-- Add more rows and cells as needed -->
+        <tr>
+            <td rowspan="1" class="hobby-column">Hobby:</td>
+            <td class="hobby-value-column">
+                <input type="checkbox" id="swimming" name="hobby" value="swimming">
+                <label for="swimming">Swimming</label>
+
+                <input type="checkbox" id="volleyball" name="hobby" value="volleyball">
+                <label for="volleyball">Volleyball</label>
+
+                <input type="checkbox" id="movie" name="hobby" value="movie" checked>
+                <label for="movie">Movie</label>
+
+                <input type="checkbox" id="game" name="hobby" value="game">
+                <label for="game">Game</label>
+
+                <input type="checkbox" id="sleep" name="hobby" value="sleep" checked>
+                <label for="sleep">Sleeping</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="skills-column">Skill:</td>
+            <td class="skills-value-column">
+                <input type="checkbox" id="java" name="skill" value="java" checked>
+                <label for="java" >Java</label>
+
+                <input type="checkbox" id="html" name="skill" value="html">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="python" name="skill" value="python">
+                <label for="python">Python</label>
+
+                <input type="checkbox" id="microsoft_office" name="skill" value="microsoft_office" checked>
+                <label for="microsoft_office" >Microsoft Office</label>
+
+                <input type="checkbox" id="premiere" name="skill" value="premiere">
+                <label for="premiere">Premiere</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="say-something-column">Say something:</td>
+            <td class="say-something-value-column">
+                <textarea placeholder="Say something here"></textarea>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
