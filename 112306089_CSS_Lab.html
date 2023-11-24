@@ -37,25 +37,57 @@
         }
 
         .navbar {
-            position: relative;
-            top: 1em;
-            left: 2em;
-            width: 10em;
-        }
+    position: relative;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; /* Use flexbox to align items */
+    border: 1px solid #333; /* Add a border to the whole navbar */
+    background-color: #c3a1a1; /* Set background color for the whole navbar */
+    margin: 20px; /* Add top and bottom margin */
+}
+
 
         .navbar li {
-            list-style-type: none;
+            width: fit-content; /* 或使用 max-content */
             margin: 0;
             padding: 0;
-            background-color: rgb(230, 222, 218);
-            text-align: left;
-            padding-left: -3em; /* Adjust the left padding to match <p> */
-            margin-bottom: 1em; /* Adjust the bottom margin as needed */
+            margin-right: 3em; /* Add space between items */
+        }
+
+        .navbar li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
         }
 
         .navbar li:hover {
             background-color: rgb(230, 222, 218);
             color: black;
+        }
+
+        .navbar .dropdown {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .dropdown:hover {
+            background-color: rgb(230, 222, 218);
+            color: black;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            background-color: rgb(230, 222, 218);
+            padding-left: 1em;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar .dropdown-content li {
+            display: flex;
+            justify-content: space-between; /* Space between items */
         }
 
         div select {
@@ -80,17 +112,25 @@
 
     <h1>My first style page</h1>
     <h2>About NCCU MIS</h2>
-    
+
+    <ul class="navbar">
+        <li>Home</li>
+        <li>About</li>
+        <li class="dropdown">
+            Service
+            <ul class="dropdown-content">
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+            </ul>
+        </li>
+        <li>Contact</li>
+    </ul>
+
     <p>National Chengchi University (NCCU) Department of Management of Information System is a leading academic institution in Taiwan, renowned for its excellence in information management education and research. Established as part of National Chengchi University, the department has a rich history and has played a pivotal role in shaping the field of information management in Taiwan.</p>
     <p>The Department of Management of Information System at NCCU offers a comprehensive and interdisciplinary curriculum that encompasses areas such as data science, information systems, and digital innovation. Students in the program gain a solid foundation in theoretical knowledge and practical skills, preparing them for diverse careers in the rapidly evolving information technology industry.</p>
     <p>Faculty members at the Department of Management of Information System are experts in their respective fields, actively engaged in cutting-edge research that contributes to advancements in information system management. The department is committed to fostering a dynamic learning environment, encouraging students to explore innovative solutions to real-world challenges and promoting a global perspective in the field of information system management.</p>
-
-    <ul class="navbar">
-        <li>○ Freshman</li>
-        <li>○ Sophomore</li>
-        <li>○ Junior</li>
-        <li>○ Senior</li>
-    </ul>
 
     <div>
         <label for="grade">Please select your grade:</label>

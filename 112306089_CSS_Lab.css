@@ -27,51 +27,77 @@
         text-align: justify; /* Align text to justify */
         margin-bottom: 1em; /* Add space below each paragraph */
     }
-
+    
     .navbar {
         position: relative;
         top: 1em;
-        left: 0;
-        width: 10em;
-        
-    }
-
-    .navbar li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(230, 222, 218);
-        text-align: left;
-        padding-left: -10em; /* 調整左邊的 padding，使其與 <p> 一致 */
-        margin-bottom: 1em; /* 可根據需要調整下方 margin */
-    }
-
-    .navbar li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(230, 222, 218);
-        text-align: left; /* 將文字置左對齊 */
-        
-    }
-
-    .navbar li:hover {
-        background-color: rgb(230, 222, 218);
-        color: black;
-    }
-
-
-    div select {
-        width: 100%;
-        padding: 10px; /* 設定內邊距，增加可點擊區域 */
-        margin-bottom: 1em;
-    }
-
-    div select option {
-        background-color: #f0f0f0; /* 設定背景色 */
-        border: none; /* 移除邊框 */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex; /* Use flexbox to align items */
+        border: 1px solid #333; /* Add a border to the whole navbar */
+        background-color: #c3a1a1; /* Set background color for the whole navbar */
+        margin: 20px 0; /* Add top and bottom margin */
+        color: #fff; /* Set text color for navbar items */
     }
     
+    .navbar li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #c3a1a1; /* Set background color for li items */
+        text-align: left;
+        padding-left: -3em; /* Adjust the left padding to match <p> */
+        margin-bottom: 1em; /* Adjust the bottom margin as needed */
+        margin-left: 1em; /* Add left margin for li items */
+    }
+    
+    .navbar li:hover {
+        background-color: #c3a1a1;
+        color: black;
+    }
+    
+    .navbar li {
+        display: inline-block; /* 將每個 li 放在同一行 */
+        margin-right: 10px; /* 調整每個 li 之間的右邊距 */
+    }
+    
+    .navbar li:last-child {
+        margin-right: 0; /* 最後一個 li 不需要右邊距 */
+    }
+    
+    .navbar li.dropdown::after {
+        content: '\25BC'; /* Unicode character for down arrow */
+        margin-left: 5px; /* Adjust the spacing between text and arrow */
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar li.dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .navbar li:not(:last-child) {
+        margin-right: 8em;
+    }
+    
+    .navbar li.dropdown {
+        border: 1px solid #897057; /* Add a border */
+        background-color: #dab69f; /* Set background color */
+        display: inline-block; /* Make it inline to sit on the same line */
+    }
+    
+    
+
+    /* Add margin between navbar and paragraph */
+    .navbar + p {
+        margin-top: 1em;
+    }
 }
 
 /* Styles specifically for print media */
