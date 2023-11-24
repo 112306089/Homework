@@ -1,0 +1,92 @@
+/* StudentID_CSS_Lab.css */
+
+/* Styles for all media types (screen, print, etc.) */
+@media all {
+    body {
+        color: rgb(72, 38, 18);
+        background-color: rgb(230, 222, 218);
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0 15em; /* Set margin on both left and right sides */
+    }
+
+    h1, h2 {
+        text-align: center; /* Center the headings */
+        margin-bottom: 1em; /* Add space below the headings */
+    }
+
+    h1 {
+        font-family: 'Georgia', serif;
+    }
+
+    h2 {
+        font-family: 'Helvetica', sans-serif;
+    }
+
+    p {
+        font-size: 1.2em; /* Set the font size for paragraphs */
+        text-align: justify; /* Align text to justify */
+        margin-bottom: 1em; /* Add space below each paragraph */
+    }
+
+    .navbar {
+        position: relative;
+        top: 1em;
+        left: 0;
+        width: 10em;
+        
+    }
+
+    .navbar li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(230, 222, 218);
+        text-align: left;
+        padding-left: -10em; /* 調整左邊的 padding，使其與 <p> 一致 */
+        margin-bottom: 1em; /* 可根據需要調整下方 margin */
+    }
+
+    .navbar li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(230, 222, 218);
+        text-align: left; /* 將文字置左對齊 */
+        
+    }
+
+    .navbar li:hover {
+        background-color: rgb(230, 222, 218);
+        color: black;
+    }
+
+
+    div select {
+        width: 100%;
+        padding: 10px; /* 設定內邊距，增加可點擊區域 */
+        margin-bottom: 1em;
+    }
+
+    div select option {
+        background-color: #f0f0f0; /* 設定背景色 */
+        border: none; /* 移除邊框 */
+    }
+    
+}
+
+/* Styles specifically for print media */
+@media print {
+    body {
+        color: black; /* Set text color to black for print */
+        background-color: white; /* Set background color to white for print */
+        margin: 0; /* Remove margin for print */
+    }
+
+    p {
+        margin: 0; /* Remove margin for paragraphs in print */
+    }
+
+    .navbar {
+        display: none; /* Hide the navbar for print */
+    }
+}

@@ -1,0 +1,107 @@
+<!-- StudentID_CSS_Lab.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="112306089_CSS_Lab.css">
+    <title>My first CSS stylesheet</title>
+    <style>
+        body {
+            color: rgb(72, 38, 18);
+            background-color: rgb(230, 222, 218);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0 auto; /* Center the content with a margin on both sides */
+            max-width: 50em; /* Optional: Set a maximum width for the content */
+        }
+
+        h1, h2 {
+            text-align: center; /* Center the headings */
+            margin-bottom: 1em; /* Add space below the headings */
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+        }
+
+        h2 {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        p {
+            font-size: 1.2em; /* Set the font size for paragraphs */
+            text-align: justify; /* Align text to justify */
+            margin-bottom: 1em; /* Add space below each paragraph */
+        }
+
+        .navbar {
+            position: relative;
+            top: 1em;
+            left: 2em;
+            width: 10em;
+        }
+
+        .navbar li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(230, 222, 218);
+            text-align: left;
+            padding-left: -3em; /* Adjust the left padding to match <p> */
+            margin-bottom: 1em; /* Adjust the bottom margin as needed */
+        }
+
+        .navbar li:hover {
+            background-color: rgb(230, 222, 218);
+            color: black;
+        }
+
+        div select {
+            width: 100%;
+            padding: 10px; /* Set padding to increase clickable area */
+            margin-bottom: 1em;
+        }
+
+        div label {
+            display: block;
+            margin-bottom: 0.5em; /* Add some space below the label */
+        }
+
+        div select option {
+            background-color: #f0f0f0; /* Set background color */
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My first style page</h1>
+    <h2>About NCCU MIS</h2>
+    
+    <p>National Chengchi University (NCCU) Department of Management of Information System is a leading academic institution in Taiwan, renowned for its excellence in information management education and research. Established as part of National Chengchi University, the department has a rich history and has played a pivotal role in shaping the field of information management in Taiwan.</p>
+    <p>The Department of Management of Information System at NCCU offers a comprehensive and interdisciplinary curriculum that encompasses areas such as data science, information systems, and digital innovation. Students in the program gain a solid foundation in theoretical knowledge and practical skills, preparing them for diverse careers in the rapidly evolving information technology industry.</p>
+    <p>Faculty members at the Department of Management of Information System are experts in their respective fields, actively engaged in cutting-edge research that contributes to advancements in information system management. The department is committed to fostering a dynamic learning environment, encouraging students to explore innovative solutions to real-world challenges and promoting a global perspective in the field of information system management.</p>
+
+    <ul class="navbar">
+        <li>○ Freshman</li>
+        <li>○ Sophomore</li>
+        <li>○ Junior</li>
+        <li>○ Senior</li>
+    </ul>
+
+    <div>
+        <label for="grade">Please select your grade:</label>
+        <select id="grade">
+            <option value="freshman">Freshman</option>
+            <option value="sophomore">Sophomore</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+        </select>
+    </div>
+
+</body>
+
+</html>
