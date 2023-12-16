@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 0 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 10px;
+      color: #ffffff;
+    }
+
+    #alertButton1 {
+      background-color: #d09081; /* Orange */
+    }
+
+    #alertButton2 {
+      background-color: rgb(123, 145, 215); /* Green */
+    }
+
+    #colorButtonBlue {
+      background-color: rgb(44, 76, 139); /* Blue */
+    }
+
+    #colorButtonGreen {
+      background-color: #2b7f40; /* Emerald */
+    }
+
+    #colorButtonReset {
+      background-color: #ffffff; /* White */
+      color: #000000; /* Black */
+      border: 2px solid #000000; /* Black border */
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+
+  <title>Interactive Buttons</title>
+</head>
+<body>
+
+    <div class="header">
+      <h1>Interactive Buttons</h1>
+    </div>
+  
+    <script>
+      var input1 = window.prompt("Please enter the first input");
+      var input2 = window.prompt("Please enter the second input");
+  
+      if (input1 > input2) {
+        document.body.style.backgroundColor = 'lightblue';
+        alert(input1 + " > " + input2);
+      } else if (input2 > input1) {
+        document.body.style.backgroundColor = 'orange';
+        alert(input2 + " > " + input1);
+      } else {
+        document.body.style.backgroundColor = 'lightyellow';
+        alert(input2 + " == " + input1);
+      }
+  
+      function showFirstInput() {
+        alert("First Input: " + input1);
+      }
+  
+      function showSecondInput() {
+        alert("Second Input: " + input2);
+      }
+  
+      function changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+  
+      function resetBackgroundColor() {
+        document.body.style.backgroundColor = 'white';
+      }
+    </script>
+  
+    <div class="button-container">
+      <input type="button" id="alertButton1" class="button" value="1st button" onClick="showFirstInput()">
+      <input type="button" id="alertButton2" class="button" value="2nd button" onClick="showSecondInput()">
+      <input type="button" id="colorButtonBlue" class="button" value="blue" onClick="changeBackgroundColor('blue')">
+      <input type="button" id="colorButtonGreen" class="button" value="green" onClick="changeBackgroundColor('green')">
+      <input type="button" id="colorButtonReset" class="button" value="Reset BG color" onClick="resetBackgroundColor()">
+    </div>
+  
+  </body>
+</html>
