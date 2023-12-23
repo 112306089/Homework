@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Statistics</title>
+</head>
+<body>
+    <button id="rollButton">Roll Dice</button>
+    <div id="diceContainer"></div>
+    <div id="frequencyTable"></div>
+
+    <script>
+        // Global variable to store the frequency of each face
+        var faceFrequency = {};
+
+        function start() {
+            var button = document.getElementById("rollButton");
+            button.addEventListener("click", rollDice, false);
+        }
+
+        // Roll the dice
+        function rollDice() {
+            // Reset faceFrequency for each roll
+            faceFrequency = {};
+
+            // Roll 12 dice
+            for (let i = 0; i < 12; i++) {
+                let randomFace = Math.floor(Math.random() * 6) + 1;
+                setImage(i + 1, randomFace);
+                updateFrequency(randomFace);
+            }
+
+            // Update frequency table on the page
+            updateFrequencyTable();
+        }
+
+        // Set image source for a die
+        function setImage(dieNumber, face) {
+            var img = document.createElement("img");
+            img.src = "path/to/dice-face-" + face + ".png"; 
+            img.alt = "Die " + dieNumber + " - Face " + face;
+
+            // Append the image to the dice container
+            var diceContainer = document.getElementById("diceContainer");
+            diceContainer.appendChild(img);
+        }
+
+        // Update frequency table in the page
+        function updateFrequency(face) {
+            // Update the frequency of the current face
+            faceFrequency[face] = (faceFrequency[face] || 0) + 1;
+        }
+
+        function updateFrequencyTable() {
+            var frequencyTable = document.getElementById("frequencyTable");
+            frequencyTable.innerHTML = "<h2>Face Frequencies</h2>";
+
+            // Display the frequency of each face
+            for (let face in faceFrequency) {
+                if (faceFrequency.hasOwnProperty(face)) {
+                    frequencyTable.innerHTML += "Face " + face + ": " + faceFrequency[face] + " times<br>";
+                }
+            }
+        }
+
+        
+
+    // Append the image to the dice container
+    var diceContainer = document.getElementById("diceContainer");
+    diceContainer.appendChild(img);
+}
+
+
+        window.addEventListener("load", start, false);
+    </script>
+</body>
+</html>
